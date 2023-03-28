@@ -7,20 +7,20 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
-		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="static/assets/img/favicon.ico">
 
 		<!-- CSS here -->
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-            <link rel="stylesheet" href="assets/css/slicknav.css">
-            <link rel="stylesheet" href="assets/css/flaticon.css">
-            <link rel="stylesheet" href="assets/css/animate.min.css">
-            <link rel="stylesheet" href="assets/css/magnific-popup.css">
-            <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-            <link rel="stylesheet" href="assets/css/themify-icons.css">
-            <link rel="stylesheet" href="assets/css/slick.css">
-            <link rel="stylesheet" href="assets/css/nice-select.css">
-            <link rel="stylesheet" href="assets/css/style.css">
+            <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="static/assets/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="static/assets/css/slicknav.css">
+            <link rel="stylesheet" href="static/assets/css/flaticon.css">
+            <link rel="stylesheet" href="static/assets/css/animate.min.css">
+            <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+            <link rel="stylesheet" href="static/assets/css/fontawesome-all.min.css">
+            <link rel="stylesheet" href="static/assets/css/themify-icons.css">
+            <link rel="stylesheet" href="static/assets/css/slick.css">
+            <link rel="stylesheet" href="static/assets/css/nice-select.css">
+            <link rel="stylesheet" href="static/assets/css/style.css">
    </head>
 
    <body>
@@ -30,7 +30,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    <img src="static/assets/img/logo/logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/GP.png" alt=""></a>
+                                    <a href="/"><img src="static/assets/img/logo/GP.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10 col-md-10">
@@ -54,7 +54,7 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav> 
                                         <ul id="navigation">  
-                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="/">Home</a></li>
                                             <li><a href="about.html">About</a></li>
                                             <li><a href="services.html">Services</a></li>
                                             <li class="active"><a href="blog.html">Blog</a>
@@ -62,7 +62,7 @@
                                                     <li><a href="blog.html">Blog</a></li>
                                                     <li><a href="blog_details.html">Blog Details</a></li>
                                                     <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="apply.html">Apply Now</a></li>
+                                                    <li><a href="/apply">Apply Now</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="contact.html">Contact</a></li>
@@ -106,129 +106,67 @@
                     <div class="col-lg-8">
                         <div class="apply-wrapper">
                             <!-- Form -->
-                            <form action="#">
+                            <form action="{{url_for('predict')}}" method="post">
                                 <div class="row">
-                                    <!-- <div class="col-lg-6"> -->
-                                       <!-- <div class="single-form">
-                                            <label>* LOAN AMOUNT ($) </label>
-                                            <input type="text" name="" placeholder="Enter name">
-                                       </div> -->
-                                    <!-- </div> -->
-                                   <!-- Nice Select -->
-                                    <div class="col-lg-6">
-                                       <!-- <div class="single-form">
-                                            <label>* PURPOSE OF LOAN </label>
+                                    <div class="col-lg-12">
+                                       <div class="single-form">
+                                            <label>Select Gender</label>
+                                            <P>"enter 1 for male, 0 for female"</P>
                                             <div class="select-option mb-10">
-                                                <select name="select" id="select1">
-                                                    <option value="">Choose Categories</option>
-                                                    <option value="">Category 1</option>
-                                                    <option value="">Category 2</option>
-                                                    <option value="">Category 3</option>
+                                                <select name="gender" id="">
+                                                    <option value="1">Male</option>
+                                                    <option value="0">Female</option>
                                                 </select>
                                             </div>
-                                       </div> -->
+                                        </div>
                                     </div>
-                                    <!-- Radio -->
-                                    <div class="col-lg-12">
-                                       <!-- <div class="single-form  d-flex">
-                                            <label>* Select Gender :</label>
-                                            Radio Select
-                                           <div class="select-radio6">
-                                                <div class="radio">
-                                                    <input id="radio" name="radio" type="radio" checked="">
-                                                    <label for="radio-6" class="radio-label">Male</label>
-                                                </div>
-                                                <div class="radio">
-                                                    <input id="radio" name="radio" type="radio">
-                                                    <label for="radio-7" class="radio-label">Female</label>
-                                                </div>
-                                            </div>
-                                       </div> -->
-                                       <div class="single-form">
-                                        <label>* Select Gender</label>
-                                        <P>"enter 1 for male, 0 for female"</P>
-                                        <div class="select-option mb-10">
-                                           <select name="select" id="select1">
-                                               <option value="1">Male</option>
-                                               <option value="0">Female</option>
-                                               
-                                           </select>
-                                       </div>
-                                   </div>
-
-                                    </div>
-                                    <!-- Marrital status -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                             <label>* Marital Status</label>
-                                             <P>"enter 1 for yes, 0 for no"</P>
-                                             <div class="select-option mb-10">
-                                                <select name="select" id="select1">
+                                            <label>Marital Status</label>
+                                            <P>"enter 1 for yes, 0 for no"</P>
+                                            <div class="select-option mb-10">
+                                                <select name="married" id="">
                                                     <option value="0">No</option>
                                                     <option value="1">Yes</option>
-                                                    
                                                 </select>
                                             </div>
                                         </div>
                                      </div>
-                                     <!-- Last Name -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                             <label>* Dependents</label>
-                                             <P>Enter no. of dependents eg: 1,2,3..</P>
-                                             <input type="number" name="" placeholder="Enter no. of dependents">
+                                            <label>Dependents</label>
+                                            <P>Enter no. of dependents eg: 1,2,3..</P>
+                                            <input type="number" name="dependents" placeholder="Enter no. of dependents">
                                         </div>
-                                     </div>
-                                     <!-- Nice Select -->
-                                   <!-- Nice Select -->
-                                    <!-- <div class="col-lg-12">
-                                        <div class="single-form">
-                                            <label>* NUMBER OF DEPENDANTS</label>
-                                            <div class="select-option mb-10">
-                                                <select name="select" id="select1">
-                                                    <option value="">Choose Option</option>
-                                                    <option value="">Category 1</option>
-                                                    <option value="">Category 2</option>
-                                                    <option value="">Category 3</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <!-- First Name -->
+                                    </div>
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                            <label>* Education</label>
+                                            <label>Education</label>
                                             <p>enter 1 for Graduate, 0 for non Graduate</p>
-                                            
                                             <div class="select-option mb-10">
-                                                <select name="select" id="select1">
+                                                <select name="education" id="select1">
                                                     <option value="0">Non-Graduate</option>
                                                     <option value="1">Graduate</option>
-                                                    
                                                 </select>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Last Name -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                            <label>* Self employed ?</label>
+                                            <label>Self employed ?</label>
                                             <p>enter 1 for yes, 0 for no</p>
-                                            
                                             <div class="select-option mb-10">
-                                               <select name="select" id="select1">
+                                               <select name="employed" id="select1">
                                                    <option value="1">Yes</option>
                                                    <option value="0">No</option>
-                                                   
                                                </select>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Nice Select -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
                                             <label>* Applicant Income</label>
-                                            <input type="text" name="" placeholder="Enter income or 0">
+                                            <input type="text" name="income" placeholder="Enter income or 0">
                                             <div class="select-option mb-10">
                                             
                                                 
@@ -239,28 +177,20 @@
                                     <div class="col-lg-6">
                                         <div class="single-form">
                                             <label>* Co-Applicant Income</label>
-                                            <input type="text" name="" placeholder="Enter income or 0">
+                                            <input type="text" name="coincome" placeholder="Enter income or 0">
                                         </div>
                                     </div>
                                     <!-- TOWN/CITY-->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                            <label>* LOAN Ammount</label>
-                                            <input type="text" name="" placeholder="Enter Ammount">
+                                            <label>* LOAN Amount</label>
+                                            <input type="text" name="loan_amount" placeholder="Enter Ammount">
                                         </div>
                                     </div>
-                                    <!-- Street Address -->
-                                    <!-- <div class="col-lg-6">
-                                        <div class="single-form">
-                                            <label>* STREET</label>
-                                            <input type="text" name="" placeholder="Enter Street Address">
-                                        </div>
-                                    </div> -->
-                                    <!-- HOUSE NAME/NUMBER -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
                                             <label>* Loan Ammount Term</label>
-                                            <input type="text" name="" placeholder="Enter term">
+                                            <input type="text" name="loan_term" placeholder="Enter term">
                                         </div>
                                     </div>
                                     <!-- Nice Select -->
@@ -268,15 +198,7 @@
                                         <div class="single-form">
                                             <label>* Credit History </label>
                                             <P>Enter credit History for eg: 1</P>
-                                            <input type="text" name="" placeholder="Enter credit History">
-                                            <!-- <div class="select-option mb-10">
-                                                <select name="select" id="select1">
-                                                    <option value="">Enter Houseowner ststus</option>
-                                                    <option value="">Category 1</option>
-                                                    <option value="">Category 2</option>
-                                                    <option value="">Category 3</option>
-                                                </select>
-                                            </div> -->
+                                            <input type="text" name="credhist" placeholder="Enter credit History">
                                         </div>
                                     </div>
                                     <!--  EMPLOYMENT INDUSTRY -->
@@ -285,8 +207,7 @@
                                             <label>* Property Area</label>
                                             <p>Enter 0 for rural, 1 for semi urban, 2 for urban</p>
                                             <div class="select-option mb-10">
-                                                <select name="select" id="select1">
-                                                    
+                                                <select name="property" id="select1">
                                                     <option value="0">Rural</option>
                                                     <option value="1">Semi-Urban</option>
                                                     <option value="2">Urban</option>
@@ -295,36 +216,19 @@
                                         </div>
                                     </div>
                                     <!-- Last Name -->
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
                                         <div class="single-form">
-                                            <label>*GRE Score</label>
-                                            <p>Enter Score Out of 340</p>
-                                            <input type="text" name="" placeholder="Enter Score Out of 340">
+                                             <label>GRE Score</label>
+                                             <P>Enter score out of 340</P>
+                                            <input type="text" name="score" placeholder="Enter Score Out of 340">
                                         </div>
                                     </div>
-                                    <!--PHONE NUMBER -->
-                                    <!-- <div class="col-lg-6">
-                                        <div class="single-form">
-                                            <label>* WORK PHONE NUMBER</label>
-                                            <input type="text" name="" placeholder="Phone Number">
-                                        </div>
-                                    </div> -->
-                                    <!--  MONTHLY INCOME -->
-                                    <!-- <div class="col-lg-6">
-                                        <div class="single-form">
-                                            <label>* MONTHLY INCOME ($)</label>
-                                            <input type="text" name="" placeholder="Enter name">
-                                        </div>
-                                    </div> -->
+                                    <button type="submit" class="btn apply-btn mt-30">Prediction!</button>
                                 </div>
                             </form>
-                            <!-- End From -->
-                            <!-- Form btn -->
-                            <a href="#" class="btn apply-btn mt-30">CALCULATE PREDICTION </a>
-                            <div class="single-form mt-50">
-                                <label>Your PREDICTION</label>
-                                <!-- <P>"enter 1 for male, 0 for female"</P> -->
-                                <input type="text" name="" placeholder="Enter Amount">
+                            <br>
+                            <p>{{prediction_text}}</p>
+
                                         
                         </div>
                     </div>
@@ -345,7 +249,7 @@
                                 <div class="single-footer-caption mb-30">
                                     <!-- logo -->
                                     <div class="footer-logo">
-                                        <a href="index.html"><img src="assets/img/logo/GP_Footer.png" alt=""></a>
+                                        <a href="/"><img src="static/assets/img/logo/GP_Footer.png" alt=""></a>
                                     </div>
                                     <div class="footer-pera">
                                         <p>Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing</p>
@@ -426,36 +330,36 @@
 
     <!-- JS here -->
 		<!-- All JS Custom Plugins Link Here here -->
-        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
 		<!-- Jquery, Popper, Bootstrap -->
-		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="./assets/js/popper.min.js"></script>
-        <script src="./assets/js/bootstrap.min.js"></script>
+		<script src="static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="static/assets/js/popper.min.js"></script>
+        <script src="static/assets/js/bootstrap.min.js"></script>
 	    <!-- Jquery Mobile Menu -->
-        <script src="./assets/js/jquery.slicknav.min.js"></script>
+        <script src="static/assets/js/jquery.slicknav.min.js"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="./assets/js/owl.carousel.min.js"></script>
-        <script src="./assets/js/slick.min.js"></script>
+        <script src="static/assets/js/owl.carousel.min.js"></script>
+        <script src="static/assets/js/slick.min.js"></script>
 		<!-- One Page, Animated-HeadLin -->
-        <script src="./assets/js/wow.min.js"></script>
-		<script src="./assets/js/animated.headline.js"></script>
-        <script src="./assets/js/jquery.magnific-popup.js"></script>
+        <script src="static/assets/js/wow.min.js"></script>
+		<script src="static/assets/js/animated.headline.js"></script>
+        <script src="static/assets/js/jquery.magnific-popup.js"></script>
 
 		<!-- Nice-select, sticky -->
-        <script src="./assets/js/jquery.nice-select.min.js"></script>
-		<script src="./assets/js/jquery.sticky.js"></script>
+        <script src="static/assets/js/jquery.nice-select.min.js"></script>
+		<script src="static/assets/js/jquery.sticky.js"></script>
         
         <!-- contact js -->
-        <script src="./assets/js/contact.js"></script>
-        <script src="./assets/js/jquery.form.js"></script>
-        <script src="./assets/js/jquery.validate.min.js"></script>
-        <script src="./assets/js/mail-script.js"></script>
-        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        <script src="static/assets/js/contact.js"></script>
+        <script src="static/assets/js/jquery.form.js"></script>
+        <script src="static/assets/js/jquery.validate.min.js"></script>
+        <script src="static/assets/js/mail-script.js"></script>
+        <script src="static/assets/js/jquery.ajaxchimp.min.js"></script>
         
 		<!-- Jquery Plugins, main Jquery -->	
-        <script src="./assets/js/plugins.js"></script>
-        <script src="./assets/js/main.js"></script>
+        <script src="static/assets/js/plugins.js"></script>
+        <script src="static/assets/js/main.js"></script>
         
     </body>
 </html>

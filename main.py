@@ -10,12 +10,8 @@ def hello_world():
 
 @app.get("/apply.html")
 @app.get("/apply")
-def hello_world():
+def apply():
     return render_template("apply.html")
-
-@app.get("/")
-def hello_world():
-    return render_template("index.html")
 
 @app.post("/predict")
 def predict():
