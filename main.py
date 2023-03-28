@@ -8,6 +8,7 @@ model = pickle.load(open("model.pkl", "rb"))
 def hello_world():
     return render_template("index.html")
 
+@app.get("/apply.html")
 @app.get("/apply")
 def hello_world():
     return render_template("apply.html")
