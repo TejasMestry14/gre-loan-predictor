@@ -8,7 +8,6 @@ model = pickle.load(open("model.pkl", "rb"))
 def hello_world():
     return render_template("index.html")
 
-@app.get("/apply.html")
 @app.get("/apply")
 def apply():
     return render_template("apply.html")
@@ -30,9 +29,9 @@ def predict():
     predicted = model.predict([[gender, married, dependents, education, employed, income, coincome, loan_amount, loan_term, credhist, property, score]])
     
     if (predicted[0] == 0):
-        return render_template("index.html", prediction_text="no loan can be granted")
+        return render_template("apply.html", prediction_text="Sorry, loan cannot be granted.")
     else :
-        return render_template("index.html", prediction_text="loan can be granted")
+        return render_template("apply.html", prediction_text="Congratulations! Loan can be granted!")
 
 if __name__ == "__main__":
     app.run(debug=True)
