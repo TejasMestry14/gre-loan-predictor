@@ -55,7 +55,7 @@
                                     <nav> 
                                         <ul id="navigation">  
                                             <li><a href="/">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
+                                            <!-- <li><a href="about.html">About</a></li>
                                             <li><a href="services.html">Services</a></li>
                                             <li class="active"><a href="blog.html">Blog</a>
                                                 <ul class="submenu">
@@ -64,13 +64,13 @@
                                                     <li><a href="elements.html">Element</a></li>
                                                     <li><a href="/apply">Apply Now</a></li>
                                                 </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            </li> -->
+                                            <li><a href="/contact">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="#" class="btn header-btn">+880.762.009.00 </a>
+                                    <a href="/apply" class="btn header-btn">Apply Now</a>
                                 </div>
                             </div>
                             </div>   
@@ -137,7 +137,7 @@
                                         <div class="single-form">
                                             <label>Dependents</label>
                                             <!-- <P>Enter no. of dependents eg: 1,2,3..</P> -->
-                                            <input type="number" min="0" name="dependents" placeholder="Enter no. of dependents">
+                                            <input type="number" min="0" name="dependents" placeholder="Enter no. of dependents" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -166,8 +166,8 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                            <label>* Applicant Income</label>
-                                            <input type="text" name="income" placeholder="Enter income or 0">
+                                            <label>Applicant Income</label>
+                                            <input type="text" name="income" placeholder="Enter monthly income" required>
                                             <div class="select-option mb-10">
                                             
                                                 
@@ -177,27 +177,27 @@
                                     <!-- First Name -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                            <label>* Co-Applicant Income</label>
-                                            <input type="text" name="coincome" placeholder="Enter income or 0">
+                                            <label>Co-Applicant Income</label>
+                                            <input type="text" name="coincome" placeholder="Enter co-applicant income" required>
                                         </div>
                                     </div>
                                     <!-- TOWN/CITY-->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                            <label>* LOAN Amount</label>
-                                            <input type="text" name="loan_amount" placeholder="Enter Amount">
+                                            <label>LOAN Amount</label>
+                                            <input type="text" name="loan_amount" placeholder="Loan amount in Lakhs" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                            <label>* Loan Amount Term</label>
-                                            <input type="text" name="loan_term" placeholder="Enter term">
+                                            <label>Loan Amount Term</label>
+                                            <input type="text" name="loan_term" placeholder="Loan term in Months" required>
                                         </div>
                                     </div>
                                     <!-- Nice Select -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                            <label>* Credit History </label>
+                                            <label>Credit History </label>
                                             <!-- <P>Enter credit History for eg: 1</P> -->
                                             <!-- <input type="text" name="credhist" placeholder="Enter credit History"> -->
                                             <div class="select-option mb-10">
@@ -211,7 +211,7 @@
                                     <!--  EMPLOYMENT INDUSTRY -->
                                     <div class="col-lg-6">
                                         <div class="single-form">
-                                            <label>* Property Area</label>
+                                            <label>Property Area</label>
                                             <!-- <p>Enter 0 for rural, 1 for semi urban, 2 for urban</p> -->
                                             <div class="select-option mb-10">
                                                 <select name="property" id="select1">
@@ -227,7 +227,7 @@
                                         <div class="single-form">
                                              <label>GRE Score</label>
                                              <!-- <P>Enter score out of 340</P> -->
-                                            <input type="text" name="score" placeholder="Enter Score Out of 340">
+                                            <input type="text" name="score" placeholder="Enter Score Out of 340" required>
                                         </div>
                                     </div>
                                     <button type="submit" class="btn apply-btn mt-30">Prediction!</button>
@@ -256,10 +256,10 @@
                                 <div class="single-footer-caption mb-30">
                                     <!-- logo -->
                                     <div class="footer-logo">
-                                        <a href="/"><img src="static/assets/img/logo/GP_Footer.png" alt=""></a>
+                                        <a href="/"><img src="/static/assets/img/logo/GP_Footer.png" alt=""></a>
                                     </div>
                                     <div class="footer-pera">
-                                        <p>Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing</p>
+                                        <p>Building a Brighter financial Future for higher studies.</p>
                                    </div>
                                 </div>
                             </div>
@@ -280,12 +280,12 @@
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>New Products</h4>
+                                    <h4>New schemes</h4>
                                     <ul>
-                                        <li><a href="#">Woman Cloth</a></li>
-                                        <li><a href="#">Fashion Accessories</a></li>
-                                        <li><a href="#">Man Accessories</a></li>
-                                        <li><a href="#">Rubber made Toys</a></li>     
+                                        <li><a href="https://nbcfdc.gov.in/loan-scheme-description/4/en" target="_blank" rel="noopener noreferrer">Edu loan NBCFDC</a></li>
+                                        <li><a href="https://www.india.gov.in/spotlight/pradhan-mantri-vidya-lakshmi-karyakram-towards-bright-future" target="_blank" rel="noopener noreferrer">PM vidya Laxmi prg</a></li>
+                                        <li><a href="https://www.bajajfinserv.in/education-loan-on-property-scheme" target="_blank" rel="noopener noreferrer">Bajaj finserv</a></li>
+                                        <li><a href="https://www.bankofbaroda.in/personal-banking/loans/education-loan/central-scheme-of-interest-subsidy-for-education-loans" target="_blank" rel="noopener noreferrer">Interest subsidy schemes BOB</a></li>     
                                     </ul>
                                 </div>
                             </div>

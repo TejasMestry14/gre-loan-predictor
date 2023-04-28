@@ -12,6 +12,14 @@ def hello_world():
 def apply():
     return render_template("apply.html")
 
+@app.get("/result")
+def result():
+    return render_template("result.html")
+
+@app.get("/contact")
+def contact():
+    return render_template("contact.html")
+
 @app.post("/predict")
 def predict():
     gender = int(request.form['gender'])
@@ -29,9 +37,9 @@ def predict():
     predicted = model.predict([[gender, married, dependents, education, employed, income, coincome, loan_amount, loan_term, credhist, property, score]])
     
     if (predicted[0] == 0):
-        return render_template("apply.html", prediction_text="Sorry, loan cannot be granted.")
+        return render_template("result.html", prediction_text="Sorry, loan cannot be granted.")
     else :
-        return render_template("apply.html", prediction_text="Congratulations! Loan can be granted!")
+        return render_template("result.html", prediction_text="Congratulations! Loan can be granted!")
 
 if __name__ == "__main__":
     app.run(debug=True)

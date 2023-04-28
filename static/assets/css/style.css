@@ -4444,19 +4444,19 @@ hr {
 
 /* line 16, ../../../sponDon TI/Running Project/259.Finance_HTML/assets/scss/_team.scss */
 .team-area .single-team .team-caption h3 a {
-  color: #33384e;
+  color: #fff;
   font-weight: 700;
   font-size: 25px;
 }
 
 /* line 20, ../../../sponDon TI/Running Project/259.Finance_HTML/assets/scss/_team.scss */
 .team-area .single-team .team-caption h3 a:hover {
-  color: #3589f1;
+  color: #021a47;
 }
 
 /* line 25, ../../../sponDon TI/Running Project/259.Finance_HTML/assets/scss/_team.scss */
 .team-area .single-team .team-caption p {
-  color: #57667e;
+  color: #fff;
 }
 
 /* line 33, ../../../sponDon TI/Running Project/259.Finance_HTML/assets/scss/_team.scss */
@@ -4642,6 +4642,12 @@ hr {
   opacity: 0;
   visibility: hidden;
   background: #3589f1;
+}
+
+.founder-img {
+  width: 88px;
+  height: 88px;
+  border-radius: 100%;
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -4950,7 +4956,7 @@ hr {
   height: 60px;
   margin-bottom: 25px;
   padding: 0 25px;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* line 33, ../../../sponDon TI/Running Project/259.Finance_HTML/assets/scss/_apply.scss */
@@ -4964,7 +4970,7 @@ hr {
   line-height: 42px;
   border: 1px solid #f3f3f3;
   margin-bottom: 25px;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 575px) {
